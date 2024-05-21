@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap 5 Horizontal Stepper Example</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/stepper.css" />
+
+  <link rel="stylesheet" href="./css/calendar.css" />
+  <link rel="stylesheet" href="./css/otp.css" />
+  <link rel="stylesheet" href="./css/fileupload.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.2.0/main.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.3.0/main.min.css" />
+  <link rel='stylesheet'
+    href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css'>
+
+
+</head>
+
+<body style="background-color: rgb(238, 242, 246)">
+  <main>
+    <!-- Start Stepper HTML -->
+
+    <div class="container-fluid mx-0 px-0">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-4">
+          <div class="col-lg-8 col-xxl-7">
+            <!-- <span class="text-muted">Steps</span> -->
+            <h2 class="display-5 fw-bold">Steps How to Apply</h2>
+            <p class="lead">
+              In order to use this service, you have to complete this
+              Application process
+            </p>
+          </div>
+        </div>
+
+        <div class="steps mb-0">
+          <progress id="progress" value="0" max="100"></progress>
+          <div class="step-item">
+            <button class="step-button text-center" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              1
+            </button>
+            <div class="step-title">Form</div>
+          </div>
+          <div class="step-item">
+            <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              2
+            </button>
+            <div class="step-title">Documents</div>
+          </div>
+          <div class="step-item">
+            <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              3
+            </button>
+            <div class="step-title">Pick a Schedule</div>
+          </div>
+          <div class="step-item">
+            <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              4
+            </button>
+            <div class="step-title">Summary</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="accordionExample">
+        <div class="card border-0">
+    <!-- 1form -->
+          <div id="collapseOne" class="collapse show py-0" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample" style="background-color: rgb(238, 242, 246)">
+            <div class="card-body p-0">
+              
+
+
+
+              <div class="container my-5 p-2 d-flex flex-column justify-content-around">
+                <div class="py-2 text-center">
+                  
+                  <h2 class="fw-bold px-3 pt-0 pb-3">
+                    Medical Assistance (Hospital Bill) Application Form
+                  </h2>
+                 
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12 order-md-1 shadow bg-white p-5 rounded">
+                    <div class="p-1 alert alert-primary d-flex justify-content-center align-items-center">
+                      <i class="fa-solid fa-circle-info mx-2"></i>
+
+                      <strong>Fields with * are required</strong>.
+                    </div>
+
+                    <h4 class="mt-5">A. Personal Information</h4>
+
+                    <hr class="mb-4 text-primary border-top-2" />
+
+                    <form class="needs-validation" novalidate>
+                      <div class="row">
+                        <div class="col-md-3 mb-3 fw-bold text-secondary">
+                          <label for="firstName " class="mb-1">*First name</label>
+                          <input type="text" class="form-control" id="firstName" placeholder="Juan " value=""
+                            required />
+                          <div class="invalid-feedback">
+                            Valid first name is required.
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-3 fw-bold text-secondary">
+                          <label for="lastName" class="mb-1">*Middle name</label>
+                          <input type="text" class="form-control" id="lastName" placeholder="Dela Cruz" value=""
+                            required />
+                          <div class="invalid-feedback">
+                            Valid last name is required.
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-3 fw-bold text-secondary">
+                          <label for="lastName" class="mb-1">*Last name</label>
+                          <input type="text" class="form-control" id="lastName" placeholder="Mengote" value=""
+                            required />
+                          <div class="invalid-feedback">
+                            Valid last name is required.
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-3 fw-bold text-secondary">
+                          <label for="lastName" class="mb-1">Name Extension</label>
+                          <input type="text" class="form-control" id="lastName" placeholder="Jr., Sr.," value=""
+                            required />
+                          <div class="invalid-feedback">
+                            Valid last name is required.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+
+                        <div class="col-md-4 mb-3">
+                          <div class="content">
+                            <div class="form-group fw-bold text-secondary">
+                              <label for="Place of Birth" class="mb-1" class="mb-1">*Place of Birth
+                              </label>
+                              <input type="text" class="form-control" id="Place of Birth" placeholder="" value=""
+                                required />
+                              <div class="invalid-feedback">
+                                Valid last name is required.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                          <div class="content">
+                            <div class="form-group fw-bold text-secondary">
+                              <label class="mb-1" class="mb-1">*Date of Birth
+                              </label>
+                              <div class="input-group date" id="datepicker">
+                                <input class="form-control" placeholder="MM/DD/YYYY" />
+                                <span class="input-group-append input-group-addon">
+                                  <span class="input-group-text h-100">
+                                    <i class="fa fa-calendar"></i>
+                                  </span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+                        <script
+                          src="https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+                        <script src="./js/datetimepicker.js"></script>
+
+                        <div class="col-md-3 mb-3 fw-bold text-secondary">
+                          <label for="state" class="mb-1">*Sex</label>
+                          <select class="custom-select d-block w-100 p-1 border rounded border-secondary text-secondary"
+                            id="state" required>
+                            <option value="">Choose...</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Others</option>
+                            <option>Prefer not say.</option>
+                          </select>
+                          <div class="invalid-feedback">
+                            Please provide a valid state.
+                          </div>
+                        </div>
+                        <div class="col-md-2 mb-3 fw-bold text-secondary">
+                          <label for="zip" class="mb-1">*Age</label>
+                          <input type="text" class="form-control" id="zip" placeholder="" required />
+                          <div class="invalid-feedback">
+                            Zip code required.
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <hr class="mb-4 text-primary border-top-2" />
+
+
+
+                      <div class="row">
+                        <div class="col-md-3 mb-3 fw-bold text-secondary">
+                          <label for="firstName " class="mb-1">*Citizenship</label>
+                          <input type="text" class="form-control" id="firstName" placeholder=" " value=""
+                            required />
+                          <div class="invalid-feedback">
+                            Valid first name is required.
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-3 fw-bold text-secondary">
+                          <label for="lastName" class="mb-1">*Mother's Maiden name</label>
+                          <input type="text" class="form-control" id="lastName" placeholder="First Name" value=""
+                            required />
+                          <div class="invalid-feedback">
+                            Valid last name is required.
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-3 fw-bold text-secondary">
+                          <label for="lastName" class="mb-1"></label>
+                          <input type="text" class="form-control" id="lastName" placeholder="Last Name" value=""
+                            required />
+                          <div class="invalid-feedback">
+                            Valid last name is required.
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-3 fw-bold text-secondary">
+                          <label for="lastName" class="mb-1"></label>
+                          <input type="text" class="form-control" id="lastName" placeholder="Middle Name" value=""
+                            required />
+                          <div class="invalid-feedback">
+                            Valid last name is required.
+                          </div>
+                        </div>
+                      </div>
+
+                      <h4 class="mt-3">B. Contacts & Address Information</h4>
+
+                      <hr class="mb-4 text-primary border-top-2" />
+
+                      <div class="row">
+                        <div class="col-md-4 mb-3 fw-bold text-secondary">
+                          <label for="username" class="mb-1">*Email Address</label>
+                          <div class="input-group">
+                            <input type="text" class="form-control" id="username" placeholder="juandelacruz" required />
+                            <div class="invalid-feedback" style="width: 100%">
+                              Your username is required.
+                            </div>
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">@gmail.com</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 mb-3 fw-bold text-secondary">
+                          <label for="username" class="mb-1">*Contact Number</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">+63</span>
+                            </div>
+                            <input type="Number" class="form-control" id="username" placeholder="9123456789" required />
+                            <div class="invalid-feedback" style="width: 100%">
+                              Your username is required.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-4 mb-3 fw-bold text-secondary">
+                          <label for="state" class="mb-1">*Municipality / City</label>
+                          <select class="custom-select d-block w-100 p-1 border rounded border-secondary text-secondary"
+                            id="state" required>
+                            <option value="">Choose...</option>
+                            <option>Borongan City</option>
+                            <option>Jipapad</option>
+                            <option>Arteche</option>
+                            <option>San Policarpo</option>
+                            <option>Oras</option>
+                            <option>Dolores</option>
+                            <option>Can-avid</option>
+                            <option>Taft</option>
+                            <option>Sulat</option>
+                            <option>San Julian</option>
+                            <option>Maydolong</option>
+                            <option>Llorente</option>
+                          </select>
+                          <div class="invalid-feedback">
+                            Please provide a valid state.
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 mb-3 fw-bold text-secondary">
+                          <label for="lastName" class="mb-1">*Barangay</label>
+                          <input type="text" class="form-control" id="lastName" placeholder="" value="" required />
+                          <div class="invalid-feedback">
+                            Valid last name is required.
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 mb-3 fw-bold text-secondary">
+                          <label for="firstName " class="mb-1">Street (Optional)</label>
+                          <input type="text" class="form-control" id="firstName" placeholder="Real Street" value=""
+                            required />
+                          <div class="invalid-feedback">
+                            Valid first name is required.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-7 mb-3 fw-bold text-secondary">
+                          <label for="lastName" class="mb-1">Permanent Mailing Address</label>
+                          <input type="text" class="form-control" id="lastName" placeholder="" value="" required />
+                          <div class="invalid-feedback">
+                            Valid last name is required.
+                          </div>
+                        </div>
+
+                       
+
+                        <div class="col-md-4 mb-3 fw-bold text-secondary">
+                          <label for="firstName " class="mb-1">ZIP Code</label>
+                          <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                            required />
+                          <div class="invalid-feedback">
+                            Valid first name is required.
+                          </div>
+                        </div>
+                      </div>
+
+                       <!-- <hr class="mb-4 text-primary border-top-2" />
+
+                     <h4 class="mb-3">ID Type</h4>
+
+                      <div class="row my-3">
+                        <div class="col-6">
+                          <div class="custom-control custom-radio">
+                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked
+                              required />
+                            <label class="custom-control-label" for="credit">Voters ID</label>
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required />
+                            <label class="custom-control-label" for="debit">UMID</label>
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input"
+                              required />
+                            <label class="custom-control-label" for="paypal">Drivers License</label>
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input id="tinid" name="paymentMethod" type="radio" class="custom-control-input" required />
+                            <label class="custom-control-label" for="tinid">Tin ID</label>
+                          </div>
+                        </div>
+
+                        <div class="col-6">
+                          <div class="custom-control custom-radio">
+                            <input id="credit1" name="paymentMethod" type="radio" class="custom-control-input" checked
+                              required />
+                            <label class="custom-control-label" for="credit1">Voters ID</label>
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input id="debit1" name="paymentMethod" type="radio" class="custom-control-input"
+                              required />
+                            <label class="custom-control-label" for="debit1">UMID</label>
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input id="paypal1" name="paymentMethod" type="radio" class="custom-control-input"
+                              required />
+                            <label class="custom-control-label" for="paypal1">Drivers License</label>
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input id="paypal2" name="paymentMethod" type="radio" class="custom-control-input"
+                              required />
+                            <label class="custom-control-label" for="paypal2">Tin ID</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="formFile" class="form-label">Upload Government ID</label>
+                        <input class="form-control" type="file" id="formFile" />
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label for="cc-name">Name on card</label>
+                          <input type="text" class="form-control" id="cc-name" placeholder="" required />
+                          <small class="text-muted">Full name as displayed on card</small>
+                          <div class="invalid-feedback">
+                            Name on card is required
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label for="cc-number">Credit card number</label>
+                          <input type="text" class="form-control" id="cc-number" placeholder="" required />
+                          <div class="invalid-feedback">
+                            Credit card number is required
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-3 mb-3">
+                          <label for="cc-expiration">Expiration</label>
+                          <input type="text" class="form-control" id="cc-expiration" placeholder="" required />
+                          <div class="invalid-feedback">
+                            Expiration date required
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                          <label for="cc-expiration">CVV</label>
+                          <input type="text" class="form-control" id="cc-cvv" placeholder="" required />
+                          <div class="invalid-feedback">
+                            Security code required
+                          </div>
+                        </div>
+                      </div> -->
+                    </form>
+                  </div>
+                </div>
+
+                <div class=" my-3 container-fluid d-flex justify-content-between align-items-center">
+                  <button class="btn btn-secondary mx-3">Home</button>
+                  <button class="btn btn-primary mx-3">Next
+
+                    
+                    
+                  </button>
+                 
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-0">
+          <!-- 2Documents -->
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="card-body" style="background-color: rgb(238, 242, 246)">
+              <div class="card-body p-0">
+
+                <!-- <div class="container py-2 text-center">
+                  
+                  <h2 class="fw-bold px-3 pt-0 pb-3">
+                    Medical Assistance (Hospital Bill) Application Form
+                  </h2>
+                  <p class="lead">Below is an example form built entirely with Bootstrap's form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+                </div> -->
+
+                <div class="container px-0 mb-5">
+                   
+                  
+
+
+                <div class="container my-5 px-0 d-flex flex-column justify-content-around">
+                  <div class="py-2 text-center">
+                  
+                    <h2 class="fw-bold px-3 pt-0 pb-3">
+                      Please upload the following documents
+                    </h2>
+                    <strong class="text-danger">Important Note:</strong>
+                    <li>Please upload a clear image of your Documents.</li>
+                    <li>Ensure the file name contains your name and the document type (e.g., "John_Doe_Medical_Certificate.jpg").</li>
+              
+                  </div>
+
+
+                        <br> 
+                        
+                 
+                        <br> 
+
+                  <div class="container mb-3">
+                    <ul class="list-group">
+
+                      <li class="list-group-item  d-flex justify-content-center align-items-center flex-column "><strong class="mt-4">1. Medical Certificate or Medical Abstract:</strong> 
+                        <div class="container-fluid d-flex justify-content-center align-items-center">
+                        <div class="col-md-3 rounded upload-container bg-white p-4 my-3 ">
+                          <div class="mb-3">
+                            <label for="medcertimage" class="form-label">
+  
+                              
+                              <Strong>ATTACH MEDICAL CERTIFICATE OR MEDICAL ABSTRACT
+                              </Strong>
+                              </label>
+  
+                              <i id="medcerticon" class="fas fa-file-upload file-icon my-3"></i>
+                              
+                              <div class="container d-flex justify-content-center align-items-center">
+                                <img id="medcertpreview" class="preview-image d-none my-3" src="#" alt="ID Front Preview">
+                              </div>
+                              
+                            <input class="form-control" type="file" id="medcertimage" accept="image/*">
+                          </div>
+  
+                          
+                         
+                        </div>
+                      </div>
+                      
+                      </li>
+                      <li class="list-group-item d-flex justify-content-center align-items-center flex-column"><strong class="mt-4">2. Barangay Certificate of Indigency:</strong>  <p class="text-secondary">Kinahanglan naka- ngaran han Authorized Representatuve nga magpro-proseso.</p>
+
+                       
+
+
+                        <div class="container-fluid d-flex justify-content-center align-items-center">
+                        
+                      <div class="col-md-3 rounded upload-container bg-white p-4 my-3 ">
+                        <div class="mb-3">
+                          <label for="idFrontImage" class="form-label"><Strong>
+                            BARANGAY CERTIFICATE OF INDIGENCY
+                          </Strong></label>
+
+                          <i id="brgycerticon" class="fas fa-file-upload file-icon my-3"></i>
+
+
+                          <div class="container d-flex justify-content-center align-items-center">
+                            <img id="idFrontPreview" class="preview-image shadow d-none my-3" src="#" alt="ID Front Preview">
+                          </div>
+                          <input class="form-control" type="file" id="idFrontImage" accept="image/*">
+                        </div>
+                      </div>
+
+                        
+                      </div>
+                      
+                      </li>
+                      <li class="list-group-item  d-flex justify-content-center align-items-center flex-column"><strong class="mt-4">3. Statement of Account or Unpaid Hospital Bill </strong><p class="text-secondary"> kinahanglan updated it Hospital Bill</p>
+                     
+                        <div class="container-fluid d-flex justify-content-center align-items-center">
+
+                        <div class="col-md-3 rounded upload-container bg-white p-4 my-3">
+                          <div class="mb-3">
+                            <label for="idBackImage" class="form-label"><Strong>STATEMENT OF ACCOUNT OR UNPAID HOSPITAL BILL</Strong></label>
+  
+                            <i id="stateofaccounticon" class="fas fa-file-upload file-icon my-3"></i>
+  
+  
+                            <div class="container d-flex justify-content-center align-items-center">
+                              <img id="idBackPreview" class="preview-image d-none my-3" src="#" alt="ID Back Preview">
+                            </div>
+                            <input class="form-control" type="file" id="idBackImage" accept="image/*">
+                          </div>
+                        </div>
+
+                         
+                        </div>
+                      </li>
+                      <li class="list-group-item  d-flex justify-content-center align-items-center flex-column"><strong class="mt-4">4. Government Issued ID:</strong>
+                        <p class="text-secondary"> Kun ano it pirma ha ID pareho daman nga pirma ha mga dokumento</p>
+
+                        <div class="container-fluid d-flex justify-content-center align-items-center">
+
+                      
+                        <div class="col-md-4 rounded upload-container bg-white p-4 my-3">
+                          <div class="mb-3">
+                            <label for="birthCertificateImage" class="form-label"><strong>GOVERNMENT ISSUED ID</strong></label>
+  
+                            
+  
+                            <div class="container d-flex justify-content-center align-items-center">
+  
+                              <i id="govid" class="fas fa-file-upload file-icon my-3"></i>
+                             
+                        
+                              <img id="birthCertificatePreview" class="preview-image d-none my-3" src="#"
+                                alt="Birth Certificate Preview">
+                            </div>
+                            <input class="form-control" type="file" id="birthCertificateImage" accept="image/*">
+                          </div>
+                        </div>
+
+                          
+                        </div></li>
+                      <li class="list-group-item  d-flex justify-content-center align-items-center flex-column"><strong class="mt-4">5. Authorization Letter:</strong> <p class="text-secondary">Pirmado hit beneficiary (an pasiente)</p>
+                      
+                        <div class="container-fluid d-flex justify-content-center align-items-center">
+
+                        <div class="col-md-4 rounded upload-container bg-white p-4 my-3">
+                          <div class="mb-3">
+                            <label for="birthCertificateImage" class="form-label"><strong>AUTHORIZATION LETTER</strong></label>
+  
+                          
+  
+                            <div class="container d-flex justify-content-center align-items-center">
+  
+                              <i id="authlettericon" class="fas fa-file-upload file-icon my-3"></i>
+                        
+                              <img id="validIDpreview" class="preview-image d-none my-3" src="#"
+                                alt="Birth Certificate Preview">
+                            </div>
+                            <input class="form-control" type="file" id="validIDimage" accept="image/*">
+                          </div>
+                        </div>
+
+                          
+                        </div></li>
+                    </ul>
+                  </div>
+                  
+                  <div class="container mb-5 ">
+                   
+                    <div class="row d-flex justify-content-around align-items-center">
+                      
+
+                      
+
+                      
+                     
+                      
+                     
+
+                     
+
+                    </div>
+                  </div>
+
+
+
+
+
+                <script src="./js/fileupload.js"></script>
+
+                <!-- <div class=" my-3 container-fluid d-flex justify-content-between align-items-center">
+                  <button class="btn btn-primary">Previous</button>
+                  <button class="btn btn-primary">Next</button>
+                </div> -->
+
+                <div class=" my-3 container-fluid d-flex justify-content-between align-items-center">
+                  <button class="btn btn-secondary mx-3">Previous</button>
+                  <button class="btn btn-primary mx-3">Next
+
+                    
+                    
+                  </button>
+                 
+                </div>
+
+
+              </div>
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card border-0">
+        <!-- <div  id="headingThree">
+Fill up Form
+    </div> -->
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample"
+          style="background-color: rgb(238, 242, 246)">
+          <div class="card-body">
+
+            <div class="container my-5 px-0 d-flex flex-column justify-content-around">
+
+              
+
+              
+            
+              <!-- <div class=" my-3 container-fluid d-flex justify-content-between align-items-center">
+                <button class="btn btn-primary">Previous</button>
+                <button class="btn btn-primary">Next</button>
+              </div> -->
+
+              <div class=" my-3 container-fluid d-flex justify-content-between align-items-center">
+                <button class="btn btn-secondary mx-3">Previous</button>
+                <button class="btn btn-primary mx-3">Next
+
+                  
+                  
+                </button>
+               
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 container-fluid p-0">
+        <!-- <div  id="headingFour">
+Fill up Form
+  </div> -->
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample"
+          style="background-color: rgb(238, 242, 246)">
+          <div class="card-body">
+
+            <div class="container my-5 px-0 d-flex flex-column justify-content-around">
+
+             
+                <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="py-2 text-center">
+                  
+                        <h2 class="fw-bold px-3 pt-0 pb-3">
+                          Application Summary
+                        </h2>
+                        
+                  
+                      </div>
+
+                      <table class="table table-bordered bg-white">
+                            
+                        <tbody>
+                          <thead>
+                        <td colspan="2" class=""><strong><h3>Personal Information</h3></strong></td>
+                          </thead>
+                            <tr>
+                               <td> <strong>First Name</strong></td>
+                                <td>Manny</td>
+                            </tr>
+                            <tr>
+                              <td> <strong>Middle Name</strong></td>
+                              <td>Garcia</td>
+                            </tr>
+                            <tr>
+                              <td> <strong>Last Name</strong></td>
+                              <td>Pacquiao</td>
+                            </tr>
+                            <tr>
+                              <td> <strong>Name Extension</strong></td>
+                              <td>N/A</td>
+                            </tr>
+                            <tr>
+                              <td> <strong>Place of Birth</strong></td>
+                              <td>Borongan City, Eastern Samar</td>
+                            </tr>
+                            <tr>
+                              <td> <strong>Date of Birth</strong></td>
+                              <td>january 6, 1992</td>
+                            </tr>
+                            <tr>
+                              <td> <strong>Sex</strong></td>
+                              <td>Male</td>
+                            </tr>
+                            <tr>
+                              <td> <strong>Age</strong></td>
+                              <td>41 years old</td>
+                            </tr>
+                            <tr>
+                              <td> <strong>Citizenship</strong></td>
+                              <td>Filipino</td>
+                            </tr>
+                            <tr>
+                              <td> <strong>Mother's Maiden Name</strong></td>
+                              <td>Kathryn Bernardo</td>
+                            </tr>
+                            <tr>
+                              <td> <strong>Email Address</strong></td>
+                              <td>danielpadilla@gmail.com</td>
+                            </tr>
+                            <tr>
+                              <td> <strong>Contact Number</strong></td>
+                              <td>09083212312</td>
+                            </tr>
+                            <tr>
+                              <td> <strong>Municipality/City</strong></td>
+                              <td>Borongan City</td>
+                            </tr>
+                            <tr>
+                              <td> <strong>Barangay</strong></td>
+                              <td>Maypangdan</td>
+                            </tr>
+                            <tr>
+                              <td> <strong>Street</strong></td>
+                              <td>Real Street</td>
+                            </tr>
+                            <tr>
+                              <td> <strong>Permanent Mailing Address</strong></td>
+                              <td>brgy. Sitio kamias dos</td>
+                            </tr>
+                            <tr>
+                              <td> <strong>Zip Code</strong></td>
+                              <td>6800</td>
+                            </tr>
+                        </tbody>
+                    </table>  
+
+
+                        <table class="table table-bordered bg-white">
+                            
+                            <tbody>
+                              <thead>
+                            <td colspan="2"><strong><h3>Attachments / Documents </h3></strong></td>
+                              </thead>
+                             
+                             
+                                
+                                <tr class="">
+
+                                  <td class="text-dark fw-bolder text-center"><img class="shadow my-2" src="https://imgv2-1-f.scribdassets.com/img/document/282707130/original/5d70dea1ff/1715554436?v=1" alt="" width="250px" height="auto" >
+                                  <br>
+                                <strong> Certificate of Indigency</strong></td>
+                                  </tr>
+                               
+
+                                <tr class="">
+
+                                  <td class="text-dark fw-bolder text-center"><img class="shadow my-2" src="https://filipiknow.net/wp-content/uploads/2022/08/medical-certificate-sample-philippines-768x1024.png" alt="" width="250px" height="auto" >
+                                  <br>
+                                <strong>Medical Certificate or Medical Abstract</strong></td>
+                                  </tr>
+                               
+
+                                <tr class="">
+
+                                  <td class="text-dark fw-bolder text-center"><img class="shadow my-2" src="https://imgv2-2-f.scribdassets.com/img/document/534757810/original/169c34b097/1713995572?v=1" alt="" width="250px" height="auto" >
+                                  <br>
+                                <strong>Statement of Account or Unpaid Hospital Bill</strong></td>
+                                  </tr>
+                               
+
+                                <tr class="">
+
+                                  <td class="text-dark fw-bolder text-center"><img class="shadow my-2" src="https://www.speed.ph/wp-content/uploads/2022/11/UMID.jpg" alt="" width="250px" height="auto" >
+                                  <br>
+                                <strong>Government ID</strong></td>
+                                  </tr>
+
+
+                                <tr class="">
+
+                                  <td class="text-dark fw-bolder text-center"><img class="shadow my-2" src="https://images.examples.com/wp-content/uploads/2018/06/Medical-Treatment-Authorization-Letter-Example.jpg" alt="" width="250px" height="auto" >
+                                  <br>
+                                <strong>Authorization Letter</strong></td>
+                                  </tr>
+
+                               
+                                  
+                              
+                             
+                               
+                              
+                            </tbody>
+                        </table>
+
+                        <table class="table table-bordered bg-white">
+                            
+                          <tbody>
+                            <thead>
+                          <td colspan="2"><strong><h3>Appointment Schedule </h3></strong></td>
+                            </thead>
+                              
+                              <tr>
+                                <td> <strong>Month</strong></td>
+                                <td >May</td>
+                              </tr>
+                              <tr>
+                                <td> <strong>Day of the Week</strong></td>
+                                <td >Monday</td>
+                              </tr>
+                              <tr>
+                                <td> <strong>Date</strong></td>
+                                <td >16</td>
+                              </tr>
+                              <tr>
+                                <td> <strong>Time</strong></td>
+                                <td >8:00 - 12:00 AM</td>
+                              </tr>
+
+                          </tbody>
+                      </table>
+
+
+                    </div>
+                </div>
+        
+
+
+            <!-- <main>
+              <div id="calendar"></div>
+
+
+              <div class="modal fade edit-form" id="form" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header border-bottom-0">
+                      <h5 class="modal-title" id="modal-title">
+                        Add Event
+                      </h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form id="myForm">
+                      <div class="modal-body">
+                        <div class="alert alert-danger" role="alert" id="danger-alert" style="display: none">
+                          End date should be greater than start date.
+                        </div>
+                        <div class="form-group">
+                          <label for="event-title">Event name
+                            <span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" id="event-title" placeholder="Enter event name"
+                            required />
+                        </div>
+                        <div class="form-group">
+                          <label for="start-date">Start date
+                            <span class="text-danger">*</span></label>
+                          <input type="date" class="form-control" id="start-date" placeholder="start-date" required />
+                        </div>
+                        <div class="form-group">
+                          <label for="end-date">End date -
+                            <small class="text-muted">Optional</small></label>
+                          <input type="date" class="form-control" id="end-date" placeholder="end-date" />
+                        </div>
+                        <div class="form-group">
+                          <label for="event-color">Color</label>
+                          <input type="color" class="form-control" id="event-color" value="#3788d8" />
+                        </div>
+                      </div>
+                      <div class="modal-footer border-top-0 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-success" id="submit-button">
+                          Submit
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="delete-modal-title"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="delete-modal-title">
+                        Confirm Deletion
+                      </h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center" id="delete-modal-body">
+                      Are you sure you want to delete the event?
+                    </div>
+                    <div class="modal-footer border-0">
+                      <button type="button" class="btn btn-secondary rounded-sm" data-dismiss="modal"
+                        id="cancel-button">
+                        Cancel
+                      </button>
+                      <button type="button" class="btn btn-danger rounded-lg" id="delete-button">
+                        Delete
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.2.0/main.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.2.0/main.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@4.2.0/main.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+            <script src="./js/script.js"></script> -->
+
+
+
+            <div class=" my-3 container-fluid d-flex justify-content-between align-items-center">
+              <button class="btn btn-secondary mx-3">Previous</button>
+              <button class="btn btn-primary mx-3">Submit
+
+                
+                
+              </button>
+             
+            </div>
+
+          </div>
+
+
+          
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- End Start Stepper HTML -->
+  </main>
+
+  <!-- Bootstrap 5 JavaScript Bundle with Popper -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
+  <script>
+    const stepButtons = document.querySelectorAll(".step-button");
+    const progress = document.querySelector("#progress");
+    const cardButtons = document.querySelectorAll(".card button");
+    const accordion = document.querySelectorAll(".collapse");
+
+    function updateProgress(index) {
+      progress.setAttribute(
+        "value",
+        (index * 100) / (stepButtons.length - 1)
+      );
+
+      stepButtons.forEach((item, secindex) => {
+        if (index > secindex) {
+          item.classList.add("done");
+        } else {
+          item.classList.remove("done");
+        }
+        if (index === secindex) {
+          item.setAttribute("aria-expanded", "true");
+          item.classList.remove("collapsed");
+        } else {
+          item.setAttribute("aria-expanded", "false");
+          item.classList.add("collapsed");
+        }
+      });
+    }
+
+    Array.from(cardButtons).forEach((button) => {
+      button.addEventListener("click", (e) => {
+        const currentCard = e.target.closest(".collapse");
+        let currentIndex = Array.from(accordion).indexOf(currentCard);
+
+        if (e.target.innerText === "Next") {
+          currentIndex += 1;
+        } else if (e.target.innerText === "Previous") {
+          currentIndex -= 1;
+        }
+
+        if (currentIndex >= 0 && currentIndex < accordion.length) {
+          accordion.forEach((item, index) => {
+            if (index === currentIndex) {
+              new bootstrap.Collapse(item, {
+                toggle: true,
+              });
+            } else {
+              new bootstrap.Collapse(item, {
+                toggle: false,
+              });
+            }
+          });
+          updateProgress(currentIndex);
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
